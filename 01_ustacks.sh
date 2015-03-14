@@ -4,15 +4,15 @@ for file in ./samples/*.fq.gz
 
 #Run ustacks on fastq files, 10 threads, depth of 2 to create a stack (default $
 
-i=5001
-for file in $files
+id=5001
 do
+	echo -e "\n\n##### Treating individual $id: $file\n\n"
     ustacks -t fastq -p 10 -m 2 -i $i -f ./samples/${file}.fq \
     -o ./stacks
-    let $i+=1;
+    id=$(echo $id + 1 | bc)
 done
 
-# #!/bin/bash
+
 # # Launch ustacks to treat all the samples individually
 
 # # OPTIONS: Comment out options that you do not wish to use
@@ -51,3 +51,4 @@ done
 #         $alpha $bound_low $bound_high $bc_err_freq -f $file -i $id
 #     id=$(echo $id + 1 | bc)
 # done 2>&1 | tee 98-log_files/stacks_1a_ustacks.log
+
