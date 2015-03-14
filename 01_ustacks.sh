@@ -4,11 +4,11 @@ for file in ./samples/*.fq.gz
 
 #Run ustacks on fastq files, 10 threads, depth of 2 to create a stack (default $
 
-id=5001
+i=5001
 do
 	ustacks -t fastq -p 10 -m 2 -i $i -f ./samples/${file}.fq \
     -o ./stacks
-    id=$(echo $id + 1 | bc)
+    let "i+=1";
 done
 
 
