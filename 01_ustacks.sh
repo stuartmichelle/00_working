@@ -12,5 +12,5 @@ for file in $files
 do
     ustacks -t fastq -p 10 -m 2 -i $i -f ./samples/${file}.fq \
     -o ./stacks
-    let i+=1;
+    let $i+=1;
 done
