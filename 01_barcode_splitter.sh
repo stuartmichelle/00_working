@@ -21,3 +21,15 @@
 	barcode_splitter.py --bcfile 04seq_index --idxread 2 --suffix .fastq.gz \
 	/local/shared/pinsky_lab/sequencing/hiseq_2014_12_19_SEQ04/clownfish-ddradseq-seq04-for-222-cycles-hau8radxx_2_read_1_passed_filter.fastq.gz \
 	/local/shared/pinsky_lab/sequencing/hiseq_2014_12_19_SEQ04/clownfish-ddradseq-seq04-for-222-cycles-hau8radxx_2_read_2_index_read_passed_filter.fastq.gz
+
+
+# USAGE: Combine the results of the two bcsplit runs into one set of reads per pool
+
+cat ./lane1/PoolA-read-1.fastq.gz ./PoolA-read-1.fastq.gz > PoolA.fastq.gz
+
+cat ./lane1/PoolB-read-1.fastq.gz ./PoolB-read-1.fastq.gz > PoolB.fastq.gz
+
+cat ./lane1/PoolC-read-1.fastq.gz ./PoolC-read-1.fastq.gz > PoolC.fastq.gz
+
+cat ./lane1/PoolD-read-1.fastq.gz ./PoolD-read-1.fastq.gz > PoolD.fastq.gz
+
