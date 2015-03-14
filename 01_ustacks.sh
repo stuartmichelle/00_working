@@ -6,8 +6,7 @@ for file in ./samples/*.fq.gz
 
 id=5001
 do
-	echo -e "\n\n##### Treating individual $id: $file\n\n"
-    ustacks -t fastq -p 10 -m 2 -i $i -f ./samples/${file}.fq \
+	ustacks -t fastq -p 10 -m 2 -i $i -f ./samples/${file}.fq \
     -o ./stacks
     id=$(echo $id + 1 | bc)
 done
