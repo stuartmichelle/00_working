@@ -6,4 +6,5 @@
 
 mkdir ~/01_stacks/04seq
 mkdir ~/01_stacks/04seq/lane1 PoolA PoolB PoolC PoolD samples stacks
-cp ~/01_stacks/barcodes.txt ~/01_stacks/04seq/barcodes.txt
+cp ~/01_stacks/barcodes.txt ~/01_stacks/04seq/
+cp ~/01_stacks/batch_1* ~/01_stacks/04seq/stacks/
