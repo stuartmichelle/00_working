@@ -39,9 +39,11 @@ cat ./lane1/PoolC-read-1.fastq.gz ./PoolC-read-1.fastq.gz > PoolC.fastq.gz
 
 cat ./lane1/PoolD-read-1.fastq.gz ./PoolD-read-1.fastq.gz > PoolD.fastq.gz
 
-cat ./lane1/unmatched-read-1.fastq.gz ./unmatched-read-1.fastq.gz > unmatched-read-1.fastq.gz
+cat ./lane1/unmatched-read-1.fastq.gz ./unmatched-read-1.fastq.gz > unmatched.fastq.gz
 
-mv unmatched-read-1.fastq.gz ./logs/
+mv unmatched.fastq.gz ./logs/
+
+rm *-read-*.fastq.gz
 
 
 
