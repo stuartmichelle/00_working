@@ -43,7 +43,9 @@ cat ./lane1/unmatched-read-1.fastq.gz ./unmatched-read-1.fastq.gz > unmatched.fa
 
 mv unmatched.fastq.gz ./logs/
 
+rm ./lane1/*-read-*.fastq.gz
 rm *-read-*.fastq.gz
+mv SEQ04_index ./logs/
 
 
 
