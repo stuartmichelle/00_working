@@ -13,5 +13,5 @@ for file in $(ls -1 ../04seq/stacks/*.tags.tsv \
 do
     sstacks -p 10 -b 1 -c ../04seq/stacks/batch_1 \
             -s $file \
-            -o ./stacks/
+            -o ../seq04/stacks/
 done
