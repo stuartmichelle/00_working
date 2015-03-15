@@ -12,6 +12,6 @@ for file in $(ls -1 ../04seq/stacks/*.tags.tsv \
 | grep -v catalog | perl -pe 's/\.tags\.tsv//')
 do
     sstacks -p 10 -b 1 -c ../04seq/stacks/batch_1 \
-            -s $file \
-            -o ../seq04/stacks/
+            -s ../04seq/stacks/$file \
+            -o ../04seq/stacks/
 done
