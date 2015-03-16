@@ -9,5 +9,6 @@ mkdir ~/01_stacks/04seq/lane1 PoolA PoolB PoolC PoolD samples stacks logs
 cp ~/01_stacks/barcodes.txt ~/01_stacks/04seq/
 cp ~/01_stacks/batch_1* ~/01_stacks/04seq/stacks/
 
+#Aren't making database because we are combining all samples into one: aclarkii 
 #Apply stacks config to mysql database
-mysql -plarvae168 seq05 < ~/local/share/stacks/sql/stacks.sql
+#mysql -plarvae168 seq05 < ~/local/share/stacks/sql/stacks.sql
