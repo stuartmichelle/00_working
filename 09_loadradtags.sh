@@ -2,7 +2,7 @@
 
 #load stacks output into the mysql database
 
-load_radtags.pl -D aclarkii -p ../04seq/stacks/ -b 1 -c -B -U -t population
+load_radtags.pl -D aclarkii -p ../04seq/stacks/ -b 1 -t population
 
 # load_radtags.pl takes a set of data produced by either the denovo_map.pl 
 # or ref_map.plprograms (or produced by hand) and loads it into the database. 
@@ -14,9 +14,9 @@ load_radtags.pl -D aclarkii -p ../04seq/stacks/ -b 1 -c -B -U -t population
 #p — Path to input files.
 #b — Batch ID.
 #M — If you have analyzed several populations, specify a population map.
-#c — Load the catalog into the database.
-#B — Load information into batch table.
-#e — batch dEscription.
+#c — Load the catalog into the database. ****Don't load catalog******
+#B — Load information into batch table. *****Don't load batch info******
+#e — batch description.
 # d — perform a dry run. Do not actually load any data, just print what would be executed.
 #W — only load files found on this white list.
 #U — do not load stacks to unique_tags table to save database space.
