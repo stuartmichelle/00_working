@@ -1,31 +1,35 @@
 #!/bin/bash
-# USAGE: run process radtags on samples by pool
-    # 1. Find seq04 and replace with current seq number
+# USAGE: run process radtags on raw seq data - find current seq data \
+ # and update below...
 
-process_radtags -b barcodes.txt -c -q -r \
+process_radtags -b barcodes_03.txt -c -q -r \
 --renz_1 pstI --renz_2 mluCI -i gzfastq \
 --adapter_1 ACACTCTTTCCCTACACGACGCTCTTCCGATCT \
--f ./PoolA.fastq.gz -o ./PoolA
+# -f ./PoolA.fastq.gz \
+# -o ./PoolA \
+# --adapter_2 ACACTCTTTCCCTACACGACGCTCTTCCGATCT \
+-P -p /local/shared/pinsky_lab/sequencing/hiseq_2014_08_07/
+-o ./ --inline_inline
 
-process_radtags -b barcodes.txt -c -q -r \
---renz_1 pstI --renz_2 mluCI -i gzfastq \
---adapter_1 ACACTCTTTCCCTACACGACGCTCTTCCGATCT \
--f ./PoolB.fastq.gz -o ./PoolB
+# process_radtags -b barcodes.txt -c -q -r \
+# --renz_1 pstI --renz_2 mluCI -i gzfastq \
+# --adapter_1 ACACTCTTTCCCTACACGACGCTCTTCCGATCT \
+# -f ./PoolB.fastq.gz -o ./PoolB
 
-process_radtags -b barcodes.txt -c -q -r \
---renz_1 pstI --renz_2 mluCI -i gzfastq \
---adapter_1 ACACTCTTTCCCTACACGACGCTCTTCCGATCT \
--f ./PoolC.fastq.gz -o ./PoolC
+# process_radtags -b barcodes.txt -c -q -r \
+# --renz_1 pstI --renz_2 mluCI -i gzfastq \
+# --adapter_1 ACACTCTTTCCCTACACGACGCTCTTCCGATCT \
+# -f ./PoolC.fastq.gz -o ./PoolC
 
-process_radtags -b barcodes.txt -c -q -r \
---renz_1 pstI --renz_2 mluCI -i gzfastq \
---adapter_1 ACACTCTTTCCCTACACGACGCTCTTCCGATCT \
--f ./PoolD.fastq.gz -o ./PoolD
+# process_radtags -b barcodes.txt -c -q -r \
+# --renz_1 pstI --renz_2 mluCI -i gzfastq \
+# --adapter_1 ACACTCTTTCCCTACACGACGCTCTTCCGATCT \
+# -f ./PoolD.fastq.gz -o ./PoolD
 
-mv nohup.out seq04_procradtags.out
-mv seq04_procradtags.out ./logs/
+# mv nohup.out seq04_procradtags.out
+# mv seq04_procradtags.out ./logs/
 
-rm ./*.fastq.gz
+# rm ./*.fastq.gz
 
 
 # process_radtags 1.12
