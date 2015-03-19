@@ -5,10 +5,9 @@
 process_radtags -b barcodes_03.txt -c -q -r \
 --renz_1 pstI --renz_2 mluCI \
 --adapter_1 ACACTCTTTCCCTACACGACGCTCTTCCGATCT \
---adapter_2 ACACTCTTTCCCTACACGACGCTCTTCCGATCT \
 -i gzfastq -P \
--p /local/shared/pinsky_lab/sequencing/hiseq_2014_08_07/ \
--o ./ --inline_inline
+-p /local/shared/pinsky_lab/sequencing/hiseq_2014_08_07 \
+-o ./samples --inline_inline
 
 
 # -f ./PoolA.fastq.gz \
