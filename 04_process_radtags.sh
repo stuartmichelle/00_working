@@ -2,7 +2,11 @@
 # USAGE: run process radtags on raw seq data - find current seq data \
  # and update below...
 
-process_radtags -b barcodes_03.txt -c -q -r --renz_1 pstI --renz_2 mluCI --adapter_1 ACACTCTTTCCCTACACGACGCTCTTCCGATCT -i gzfastq-P -p /local/shared/pinsky_lab/sequencing/hiseq_2014_08_07 -o ./samples --inline_inline
+process_radtags -i gzfastq \
+-1 /local/shared/pinsky_lab/sequencing/hiseq_2014_08_07/clownfish-ddradseq-seq03-for-222-cycles-ha1wgadxx_1_read_1_passed_filter.fastq.gz \
+-2 /local/shared/pinsky_lab/sequencing/hiseq_2014_08_07/clownfish-ddradseq-seq03-for-222-cycles-ha1wgadxx_1_read_2_index_read_passed_filter.fastq.gz \
+-o ./samples -b ./barcodes_03.txt -c -q -r -D --inline_inline \
+--renz_1 pstI --renz_2 mluCI --adapter_1 ACACTCTTTCCCTACACGACGCTCTTCCGATCT
 
 #problem is somewhere in the \returns above, so I made it all a straight line and it works...
 
